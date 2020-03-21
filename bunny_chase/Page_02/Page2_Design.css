@@ -1,0 +1,92 @@
+body {
+    overflow-x: hidden;
+}
+
+div {
+    position: relative;
+}
+
+
+/*Positionnierung der div elemente*/
+#div1 {
+    top: 70px;
+    left: 20px;
+}
+
+#bunny {
+    top: -260px;
+    left: 8%;
+}
+
+#chase {
+    left: 10%;
+    top: -280px;
+}
+
+
+
+
+/*Bearbeitung der Texte*/
+a {
+    font-family: Impact, serif;
+    font-size: 100px;
+    color: white;
+    position: relative;
+}
+
+.lila {
+    text-shadow: 2px 2px 7px #C400FF;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #C400FF;
+}
+
+.pink {text-shadow: 2px 2px 7px #FF6DDC;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FF6DDC;
+}
+
+#first {
+    color: #C400FF;
+}
+
+#second {
+    color: #FF6DDC;
+}
+
+
+
+
+
+/*Das Spielfeld*/
+#container {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    height: 500px;
+    border: 2px solid black;
+}
+
+/*Unser Hase*/
+#hase {
+    position: absolute;
+    margin-top: 430px;
+}
+
+footer {
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.foot {
+    font-family: Impact;
+    font-size: larger;
+    color: #B0B0B0;
+}
+
+#strich {
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
+}

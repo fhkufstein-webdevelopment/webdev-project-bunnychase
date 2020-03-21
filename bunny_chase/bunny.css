@@ -1,0 +1,175 @@
+/*Import fonts from google font */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+html,body{
+
+    overflow: hidden;
+    background: pink;
+    background: var(--pink-gradient);
+}
+
+/*Variables*/
+:root{
+    --primary-gradient: linear-gradient(to right,purple, mediumpurple);
+    --pink-gradient: linear-gradient(to right,white, hotpink);
+    --text-color: white;
+    --montserrat:"Monserrat", cursive;
+    --primary-shadow:3px 4px 7px rgba(27,27,27,0.534);
+    --Lobster: "Lobster", cursiv;
+    --border-color: rgba(0,0,0,0.329);
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98%;
+    max-height: 610px;
+}
+
+.container .panel{
+    width: 60%;
+    height: 72%;
+    box-shadow: var(--primary-gradient);
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    height: 100%;
+    background: #fff;
+}
+
+.liquid{
+    background-image: url('./images/watercolour-1321645_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.owl-carousel{
+    width: 100%;
+    height: 320px;
+    max-height: 330px;
+}
+
+.owl-carousel .owl-item .login_img{
+    float: right;
+    width: 435px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 3rem;
+}
+
+.owl-dots{
+    position: fixed;
+    padding: 3rem 1.2rem;
+    display: flex !important;
+}
+
+.owl-dots button{
+    border-radius: 5rem;
+    margin: 3rem 0;
+}
+
+.owl-dots button span{
+background: var(--text-color)!important;
+    margin: .6rem!important;
+}
+
+.owl-dots.active{
+    border: 1px solid yellow !important;
+}
+
+/* Second Column Login */
+
+.btn{
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4rem;
+    background: dodgerblue;
+    color: whitesmoke;
+    font-size: .7rem;
+    font-family: var(--montserrat);
+    box-shadow: var(--primary-shadow);
+    cursor: pointer;
+}
+
+
+.titles{
+    margin-bottom: 2.2rem;
+}
+
+form{
+    height: 55%;
+    max-height: 280px;
+    margin-top: 5.5rem;
+}
+
+form h5{
+    font-family: var(--montserrat);
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
+
+
+form .form-group{
+    text-align: left;
+    border: 1px solid var(--border-color);
+    margin-top: .9rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 11rem;
+}
+
+form .form-group .form-input{
+    padding: .1rem 1rem;
+    background: transparent;
+    border: none;
+    font-family: var(--montserrat);
+    font-size: .7rem;
+    overflow: hidden;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form .input-icon{
+    display: inline;
+    color: var(--border-color);
+}
+
+form .btn-login{
+    float: none;
+    padding: .2rem 3rem;
+    margin-left: 1rem;
+}
+
+
+a {
+    font-family: Impact, serif;
+    font-size: 80px;
+    color: white;
+    position: relative;
+}
+
+.lila {
+    text-shadow: 2px 2px 5px #C400FF;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #C400FF;
+}
+
+.pink {text-shadow: 1px 2px 5px #FF6DDC;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FF6DDC;
+}
+
+#first {
+    color: #C400FF;
+}
+
+#second {
+    color: #FF6DDC;
+}

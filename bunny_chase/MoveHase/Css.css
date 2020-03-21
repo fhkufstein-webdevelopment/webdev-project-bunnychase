@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    margin: auto;
+}
+
+#container {
+    margin: 0 1% 5px;
+    width: 98%;
+    height: 500px;
+    position: relative;
+    border: 2px solid black;
+}
+
+#hase {
+    margin-top: 430px;
+    position: absolute;
+}
