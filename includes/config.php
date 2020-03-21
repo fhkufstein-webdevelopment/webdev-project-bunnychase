@@ -1,6 +1,6 @@
 <?php
 
-define('URL_PATH', '/kufstein/baseproject');
+define('URL_PATH', '/webdev-project-bunnychase');
 
 define('LOGIN_URL', 'login');
 define('LOGOUT_URL', 'logout');
