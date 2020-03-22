@@ -1,0 +1,14 @@
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#myCanvas {
+    width: 98%;
+    height: 500px;
+    margin: 20px 1% 20px;
+}
+
+#hase {
+    position: absolute;
+}
