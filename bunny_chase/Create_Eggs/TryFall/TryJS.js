@@ -1,12 +1,25 @@
-var pos = 0;    //position auf der x-Axe des Hasen (am Anfang 0);
+var myGamePiece = [];
+var myInterval;
+var i = 0;
+
+function startGame() {
+    myGameArea.start();
+    var hase = document.getElementById("hase");
+    var can = document.getElementById("canvas");
+    hase.style.top = can.offsetTop+can.offsetHeight-hase.offsetHeight +'px';
+    hase.style.left = can.offsetLeft +'px';
+}
+
+
+var pos = 25;    //position auf der x-Axe des Hasen (am Anfang 0);
 window.onkeydown = function (e) {
     var elem = document.getElementById("hase");
     var keyboardEvent = e.keyCode;
-    var limit = document.getElementById("myCanvas").offsetWidth;
-    if (keyboardEvent === 37 && pos>=10) {
+    var limit = document.getElementById("canvas").offsetWidth;
+    if (keyboardEvent === 37 && pos>25) {
         pos -= 10;
         elem.style.left = pos +'px';
-    } else if(keyboardEvent === 39 && pos<=limit-elem.offsetWidth-10) {
+    } else if(keyboardEvent === 39 && pos<limit-62) {
         pos += 10;
         elem.style.left = pos + 'px';
     }
@@ -14,16 +27,9 @@ window.onkeydown = function (e) {
 
 
 
-var myGamePiece = [];
-var myInterval;
-var i = 0;
 function create() {
-    myGamePiece[i] = new component(35, 40, Math.floor(Math.random()*document.body.offsetWidth), 0);
+    myGamePiece[i] = new component(35, 40, Math.floor(Math.random()*document.getElementById("canvas").offsetWidth), 0);
     i++;
-}
-
-function startGame() {
-    myGameArea.start();
 }
 
 function play() {
@@ -35,8 +41,8 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.id = "canvas";
-        this.canvas.width = document.body.offsetWidth;
         this.canvas.height = 500;
+        this.canvas.width = 1644;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.getElementById('play'));
     },

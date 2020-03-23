@@ -7,8 +7,13 @@ body {
     width: 98%;
     height: 500px;
     margin: 20px 1% 20px;
+    border: 1px solid black;
 }
 
 #hase {
     position: absolute;
+}
+
+#canvas {
+    margin: 20px 1% 20px;
 }
