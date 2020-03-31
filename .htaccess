@@ -1,7 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  RewriteBase /webdev-project-bunnychas
+  #adapt this following line to your path if necessary
+  RewriteBase /webdev-project-bunnychase
+
+  ##
+  # Change the RewriteBase if your project is in a subdirectoy and
+  # the rewrite rules are not working properly. Usage examples:
+  #
+  #RewriteBase /uebung04/aufgabe02	# we assume url is http://localhost/uebung04/aufgabe02
+  #RewriteBase /aufgabe02/	# we assume url is http://localhost/aufgabe02
 
   RewriteRule ^/?api/(.*)$ api.php [L] #adapt this line to your path if necessary
 
