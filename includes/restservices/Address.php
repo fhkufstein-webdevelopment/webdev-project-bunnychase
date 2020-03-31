@@ -59,7 +59,7 @@ class Address extends RESTClass
 
 	protected function createRequest($data)
 	{
-		$requiredFields = array('firstname', 'lastname', 'street', 'zip', 'city');
+		$requiredFields = array('firstname', 'lastname', 'email', 'nickname');
 
 		$error = false;
 		$errorFields = array();
@@ -97,7 +97,7 @@ class Address extends RESTClass
 
 	protected function saveRequest($data)
 	{
-		$requiredFields = array('firstname', 'lastname', 'street', 'zip', 'city', 'id');
+		$requiredFields = array('firstname', 'lastname', 'email', 'nickname', 'id');
 
 		$error = false;
 		$errorFields = array();

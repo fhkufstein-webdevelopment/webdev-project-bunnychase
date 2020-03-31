@@ -9,22 +9,15 @@
 			<label for="lastname">Nachname:</label>
 			<input type="text" name="lastname" class="form-control" id="lastname" value="<?php echo $this->lastname; ?>">
 		</div>
-		<div class="form-group">
-			<label for="street">Straße</label>
-			<input type="text" class="form-control" name="street" id="street" value="<?php echo $this->street; ?>">
-		</div>
-		<div class="form-group">
-			<label for="zip">PLZ:</label>
-			<input type="text" name="zip" class="form-control" id="zip" value="<?php echo $this->zip; ?>">
-		</div>
-		<div class="form-group">
-			<label for="city">Ort:</label>
-			<input type="text" name="city" class="form-control" id="city" value="<?php echo $this->city; ?>">
-		</div>
 
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" name="email" class="form-control" id="email" value="<?php echo $this->email; ?>">
+        </div>
+
+        <div class="form-group">
+            <label for="nickname">Nickname:</label>
+            <input type="text" name="nickname" class="form-control" id="nickname" value="<?php echo $this->nickname; ?>">
         </div>
 
 		<?php if($this->id): ?>
