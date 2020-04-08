@@ -13,3 +13,8 @@ $route['/logout'] = array('controller' => 'LogoutController', 'uniqueName' => 'l
 $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 
 $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
+
+//test
+/*$route['/spiel'] = array('controller' => 'GameController', 'uniqueName' => 'spiel');
+$route['/spiel.html'] = array('controller' => 'GameController', 'uniqueName' => 'spiel');
+*/

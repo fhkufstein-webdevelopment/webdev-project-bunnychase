@@ -79,7 +79,9 @@ class User extends Database
 	public function redirectToIndex()
 	{
 		header('Location: '.INDEX_URL);
-		header('Status: 303');
+        //header('Location: '.GAME_URL);
+        //header('Location: http://localhost/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Spiel.html');
+        header('Status: 303');
 		exit();
 	}
 
@@ -221,9 +223,9 @@ class User extends Database
 		self::updateUser($this->id, $data);
 	}
 }
-$user = new User();
+/*$user = new User();
 
 if($loginRequired)
 {
     $user->authenticate();
-}
+}*/

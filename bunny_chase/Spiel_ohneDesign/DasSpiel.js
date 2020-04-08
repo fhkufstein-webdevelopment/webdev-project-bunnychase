@@ -19,19 +19,20 @@ function startGame() {
 window.onkeydown = function(e) {
     var hase = document.getElementById("hase");
     var can = document.getElementById("canvas");
+    console.log(hase.src);
     var keyboardEvent = e.keyCode;
     var leftHase = hase.offsetLeft;
     var rightHase = hase.offsetLeft + hase.offsetWidth;
     var leftCan = can.offsetLeft;
     var rightCan = can.offsetLeft + can.offsetWidth;
     if (keyboardEvent === 37 && leftHase-10>=leftCan) {
-        if (hase.src === "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Bunnz-chace.png") {
-            hase.src = "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Hase-korb-links.png";
+        if (hase.getAttribute('src') === "Bunnz-chace.png") {
+            hase.setAttribute("src", "Hase-korb-links.png");
         }
         hase.style.left = leftHase-10 +'px';
     } else if (keyboardEvent === 39 && rightHase+10<=rightCan) {
-        if (hase.src === "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Hase-korb-links.png") {
-            hase.src = "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Bunnz-chace.png";
+        if (hase.getAttribute('src') === "Hase-korb-links.png") {
+            hase.setAttribute("src", "Bunnz-chace.png");
         }
         hase.style.left = leftHase+10+'px';
     }
@@ -170,11 +171,11 @@ function component(width, height, x, y) {
         var corbBottom = hase.offsetTop+hase.offsetHeight;
         var corbTop = corbBottom-20;
 
-        if (hase.src === "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Bunnz-chace.png") {
+        if (hase.getAttribute('src') === "Bunnz-chace.png") {
             corbLeft = hase.offsetLeft+(hase.offsetWidth/2);
             corbRight = hase.offsetLeft+hase.offsetWidth;
 
-        } else if (hase.src === "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Hase-korb-links.png") {
+        } else if (hase.getAttribute('src') === "Hase-korb-links.png") {
             corbLeft = hase.offsetLeft;
             corbRight = corbLeft+(hase.offsetWidth/2);
         }
@@ -299,10 +300,10 @@ function createCarrot(width, height, x, y) {
         var corbBottom = hase.offsetTop+hase.offsetHeight;
         var corbTop = corbBottom-20;
 
-        if (hase.src === "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Bunnz-chace.png") {
+        if (hase.getAttribute('src') === "Bunnz-chace.png") {
             corbLeft = hase.offsetLeft+(hase.offsetWidth/2);
             corbRight = hase.offsetLeft+hase.offsetWidth;
-        } else if (hase.src === "http://localhost:63342/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Hase-korb-links.png") {
+        } else if (hase.getAttribute('src') === "Hase-korb-links.png") {
             corbLeft = hase.offsetLeft;
             corbRight = corbLeft+(hase.offsetWidth/2);
         }
