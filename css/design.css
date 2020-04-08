@@ -6,7 +6,9 @@ body {
     position: absolute;
     top: 130px;
     left: 170px;
-    border: 1px solid black;
+    background-image: url("Bilder/spiel_bg.jpg");
+    background-size: 1200px 500px;
+    background-repeat: no-repeat;
 }
 
 #hase {
