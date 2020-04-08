@@ -12,7 +12,8 @@ class LoginController extends Controller
 
 		if($this->user->isLoggedIn)
 		{
-			$this->user->redirectToIndex();
+			//$this->user->redirectToIndex();
+            $this->user->redirectToGame();
 		}
 
 		$this->checkForLoginPost();
@@ -32,7 +33,8 @@ class LoginController extends Controller
 			{
 				if($this->user->login($username, $password))
 				{
-					$this->user->redirectToIndex();
+					//$this->user->redirectToIndex();
+                    $this->user->redirectToGame();
 				}
 				else
 				{

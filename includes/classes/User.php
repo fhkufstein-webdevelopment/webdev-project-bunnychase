@@ -79,11 +79,16 @@ class User extends Database
 	public function redirectToIndex()
 	{
 		header('Location: '.INDEX_URL);
-        //header('Location: '.GAME_URL);
-        //header('Location: http://localhost/webdev-project-bunnychase/bunny_chase/Spiel_ohneDesign/Spiel.html');
         header('Status: 303');
 		exit();
 	}
+
+	public function redirectToGame()
+    {
+	    header('Location: '.GAME_URL);
+	    header('Status: 303');
+	    exit();
+    }
 
 	public function login($username, $password)
 	{

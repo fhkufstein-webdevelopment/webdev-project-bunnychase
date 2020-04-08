@@ -25,13 +25,13 @@ window.onkeydown = function(e) {
     var leftCan = can.offsetLeft;
     var rightCan = can.offsetLeft + can.offsetWidth;
     if (keyboardEvent === 37 && leftHase-10>=leftCan) {
-        if (hase.getAttribute("src") === "Bilder/Bunnz-chace.png") {
-            hase.setAttribute("src", "Bilder/Hase-korb-links.png");
+        if (hase.getAttribute("src") === "js/Bilder/Bunnz-chace.png") {
+            hase.setAttribute("src", "js/Bilder/Hase-korb-links.png");
         }
         hase.style.left = leftHase-10 +'px';
     } else if (keyboardEvent === 39 && rightHase+10<=rightCan) {
-        if (hase.getAttribute("src") === "Bilder/Hase-korb-links.png") {
-            hase.setAttribute("src", "Bilder/Bunnz-chace.png");
+        if (hase.getAttribute("src") === "js/Bilder/Hase-korb-links.png") {
+            hase.setAttribute("src", "js/Bilder/Bunnz-chace.png");
         }
         hase.style.left = leftHase+10+'px';
     }
@@ -113,13 +113,13 @@ function component(width, height, x, y) {
         ctx.translate(this.x, this.y);
         var img = document.createElement("img");
         if (ran === 1) {
-            img.setAttribute("src", "Bilder/easter-egg.png");
+            img.setAttribute("src", "js/Bilder/easter-egg.png");
         } else if (ran === 2) {
-            img.setAttribute("src", "Bilder/Egg1.png");
+            img.setAttribute("src", "js/Bilder/Egg1.png");
         } else if (ran === 3) {
-            img.setAttribute("src", "Bilder/Egg2.png");
+            img.setAttribute("src", "js/Bilder/Egg2.png");
         } else if (ran === 4) {
-            img.setAttribute("src", "Bilder/Egg3.png");
+            img.setAttribute("src", "js/Bilder/Egg3.png");
         }
         console.log(img.src);
         ctx.drawImage(img, 0,0, this.width, this.height);
@@ -171,11 +171,11 @@ function component(width, height, x, y) {
         var corbBottom = hase.offsetTop+hase.offsetHeight;
         var corbTop = corbBottom-20;
 
-        if (hase.getAttribute("src") === "Bilder/Bunnz-chace.png") {
+        if (hase.getAttribute("src") === "js/Bilder/Bunnz-chace.png") {
             corbLeft = hase.offsetLeft+(hase.offsetWidth/2);
             corbRight = hase.offsetLeft+hase.offsetWidth;
 
-        } else if (hase.getAttribute("src") === "Bilder/Hase-korb-links.png") {
+        } else if (hase.getAttribute("src") === "js/Bilder/Hase-korb-links.png") {
             corbLeft = hase.offsetLeft;
             corbRight = corbLeft+(hase.offsetWidth/2);
         }
@@ -272,7 +272,7 @@ function createCarrot(width, height, x, y) {
         ctx.save();
         ctx.translate(this.x, this.y);
         var img = document.createElement("img");
-        img.setAttribute("src", "Bilder/carrot.png");
+        img.setAttribute("src", "js/Bilder/carrot.png");
         ctx.drawImage(img, 0,0, this.width, this.height);
         ctx.restore();
     };
@@ -300,10 +300,10 @@ function createCarrot(width, height, x, y) {
         var corbBottom = hase.offsetTop+hase.offsetHeight;
         var corbTop = corbBottom-20;
 
-        if (hase.getAttribute("src") === "Bilder/Bunnz-chace.png") {
+        if (hase.getAttribute("src") === "js/Bilder/Bunnz-chace.png") {
             corbLeft = hase.offsetLeft+(hase.offsetWidth/2);
             corbRight = hase.offsetLeft+hase.offsetWidth;
-        } else if (hase.getAttribute("src") === "Bilder/Hase-korb-links.png") {
+        } else if (hase.getAttribute("src") === "js/Bilder/Hase-korb-links.png") {
             corbLeft = hase.offsetLeft;
             corbRight = corbLeft+(hase.offsetWidth/2);
         }

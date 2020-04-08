@@ -14,7 +14,6 @@ $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' 
 
 $route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
 
-//test
-/*$route['/spiel'] = array('controller' => 'GameController', 'uniqueName' => 'spiel');
-$route['/spiel.html'] = array('controller' => 'GameController', 'uniqueName' => 'spiel');
-*/
+//route zu meinem Spiel
+$route['/game'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+$route['/game.html'] = array('controller' => 'GameController', 'uniqueName' => 'game');
