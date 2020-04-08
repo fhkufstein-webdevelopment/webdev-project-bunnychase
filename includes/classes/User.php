@@ -64,7 +64,7 @@ class User extends Database
 
 	public function redirectToLogin()
 	{
-		if(API_CALL === true)
+		if('API_CALL' === true)
 		{
 			header('Location: ../'.LOGIN_URL);
 		}
@@ -220,4 +220,10 @@ class User extends Database
 	{
 		self::updateUser($this->id, $data);
 	}
+}
+$user = new User();
+
+if($loginRequired)
+{
+    $user->authenticate();
 }

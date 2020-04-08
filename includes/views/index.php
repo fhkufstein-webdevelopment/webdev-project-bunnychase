@@ -16,7 +16,6 @@ echo $this->header;
                     <th>Name</th>
                     <th>Vorname</th>
                     <th>Nickname</th>
-                    <th>VCard</th>
                     <th>Bearbeiten</th>
                     <th>Löschen</th>
                 </tr>

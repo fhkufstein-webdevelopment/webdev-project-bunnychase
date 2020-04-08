@@ -1,0 +1,19 @@
+body {
+    overflow-x: hidden;
+}
+
+#canvas {
+    position: absolute;
+    top: 130px;
+    left: 170px;
+    border: 1px solid black;
+}
+
+#hase {
+    position: absolute;
+    z-index: 2;
+}
+
+p {
+    position: relative;
+}

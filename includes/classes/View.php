@@ -1,9 +1,5 @@
 <?php
 
-
-/**
- * @author Daniel Hoover <https://github.com/danielhoover>
- */
 class View
 {
 	private $viewName = "";

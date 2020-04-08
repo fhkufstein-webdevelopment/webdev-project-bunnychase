@@ -128,17 +128,17 @@ function component(width, height, x, y) {
             document.getElementById("life").innerText = --life+"";
             if (life<=0) {
                 myGameArea.stop();
-               /* if (confirm("Sie haben keine Leben mehr!\nWollen sie erneut spielen?")) {
-                    count = 0;
-                    life = 3;
-                    speed = 2;
-                    document.getElementById("points").innerText = count+"";
-                    document.getElementById("life").innerText = life+"";
-                    myGameArea.clear();
-                    myGamePiece = null;
-                    myGamePiece2 = null;
-                    play();
-                }*/
+                /* if (confirm("Sie haben keine Leben mehr!\nWollen sie erneut spielen?")) {
+                     count = 0;
+                     life = 3;
+                     speed = 2;
+                     document.getElementById("points").innerText = count+"";
+                     document.getElementById("life").innerText = life+"";
+                     myGameArea.clear();
+                     myGamePiece = null;
+                     myGamePiece2 = null;
+                     play();
+                 }*/
 
                 $.ajax({
                     'url':    'game', //DasSpiel ---  Spiel   ?????
