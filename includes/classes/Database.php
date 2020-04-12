@@ -51,7 +51,7 @@ class Database
 		//close the connection - the @ in front of the function call suppresses any error that might be thrown - i.e. invalid connection - if the connection is invalid
 		//it would mean that it was closed or never established - therefore we don't care about the connection anymore
 		//this is the reason why we don't want any errors to appear
-		@mysqli_close($this->conn);
+		//@mysqli_close($this->conn);
 	}
 
 

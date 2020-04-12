@@ -2,6 +2,7 @@
 var myGamePiece, myGamePiece2, interval1, interval2, mainInterval, carrotInterval, carrot;
 var speed = 1.5;
 var count = 0, life = 3;
+var isPlaying = false;
 
 
 //Die erste Funktion die beim Laden des Spieles ausgeführt wird
@@ -55,21 +56,24 @@ var create = {
 
 //Wird ausgeführt wenn man auf den Button Play drückt
 function play() {
-    var i = 0;
-    mainInterval = setInterval(function () {
-        if (i===0) {
-            create.piece1();
-            interval1 = setInterval(updateGameArea, 20);
-            i++;
-        } else if (i===1) {
-            create.piece2();
-            clearInterval(interval1);
-            interval2 = setInterval(updateGameAreaMain, 20);
-            i++;
-        } else {
-            clearInterval(this.interval);
-        }
-    },  3000);
+    if (!isPlaying) {
+        isPlaying = true;
+        var i = 0;
+        mainInterval = setInterval(function () {
+            if (i === 0) {
+                create.piece1();
+                interval1 = setInterval(updateGameArea, 20);
+                i++;
+            } else if (i === 1) {
+                create.piece2();
+                clearInterval(interval1);
+                interval2 = setInterval(updateGameAreaMain, 20);
+                i++;
+            } else {
+                clearInterval(this.interval);
+            }
+        }, 3000);
+    }
 }
 
 
@@ -134,26 +138,7 @@ function component(width, height, x, y) {
         if ((this.y + this.height)>= bottom) {
             document.getElementById("life").innerText = --life+"";
             if (life<=0) {
-                myGameArea.stop();
-                alert("Du hast keine Leben mehr!\nDu hast "+count+" Eier gefangen");
-
-
-
-                $.ajax({
-                    'url':    'game',
-                    'method': 'post',
-                    'data':    {'action': 'saveScore', 'score': count},
-                    'success': function(receivedData) {
-                        if(receivedData.result) {
-                            //after save change url to scoreboard
-                            location.href = 'highscore';
-                        }
-                    }
-                });
-
-
-
-
+                gameOver();
             }
             myGameArea.context.clearRect(this.x, this.y, this.width, this.height);
             if (piece === "piece1") {
@@ -318,4 +303,21 @@ function createCarrot(width, height, x, y) {
         return (corbTop <= carrotBottom) && (corbLeft <= carrotRight) &&
             (corbRight >= carrotLeft) && (corbBottom >= carrotTop);
     }
+}
+
+function gameOver() {
+    myGameArea.stop();
+    alert("0 Leben");
+    $.ajax({
+        'url':    'game',
+        'method': 'post',
+        'data':    {'action': 'saveScore', 'score': count},
+        'success': function(receivedData) {
+            if(receivedData.result) {
+                //after save change url to scoreboard
+                location.href = 'highscore';
+            }
+        }
+    });
+    openModal();
 }
