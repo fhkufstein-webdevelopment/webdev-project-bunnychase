@@ -228,9 +228,9 @@ class User extends Database
 		self::updateUser($this->id, $data);
 	}
 }
-/*$user = new User();
+$user = new User();
 
 if($loginRequired)
 {
     $user->authenticate();
-}*/
+}

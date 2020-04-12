@@ -311,5 +311,3 @@ function createCarrot(width, height, x, y) {
             (corbRight >= carrotLeft) && (corbBottom >= carrotTop);
     }
 }
-
-// ich veränder was um zu sehen, ob es geht
