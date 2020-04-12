@@ -3,21 +3,19 @@
 echo $this->header;
 ?>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/design.css">
+        <!--<link rel="stylesheet" type="text/css" href="css/design.css">-->
         <meta charset="UTF-8">
         <title>Bunny Chase</title>
-        <script src="js/game.js"></script>
+        <!--<script src="js/game.js"></script>-->
     </head>
     <body onload="startGame()">
-    <h1 id="logo">Logo</h1>
+    <img src="js/Bilder/Osterhase1.png" alt="logo" height="80" width="80" id="hasi">
     <table>
         <thead>
         <tr>
-            <th>Game</th>
-            <th>Highscore</th>
-            <th>Register</th>
-            <th>Kontakt</th>
-            <th>About</th>
+            <th><a class="navbar-link" href="">Game</th>
+            <th><a class="navbar-link" href="">Highscore</th>
+            <th><a class="navbar-link" href="">About</th>
         </tr>
         </thead>
     </table>
