@@ -3,21 +3,25 @@
 echo $this->header;
 ?>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/design.css">
+        <!--<link rel="stylesheet" type="text/css" href="css/design.css">-->
         <meta charset="UTF-8">
         <title>Bunny Chase</title>
-        <script src="js/game.js"></script>
+        <!--<script src="js/game.js"></script>-->
     </head>
     <body onload="startGame()">
-    <h1 id="logo">Logo</h1>
-    <table>
+    <img src="js/Bilder/Osterhase1.png" alt="logo" height="80" width="80" id="hasi">
+    <table class="navbar-nav">
         <thead>
         <tr>
-            <th>Game</th>
-            <th>Highscore</th>
-            <th>Register</th>
-            <th>Kontakt</th>
-            <th>About</th>
+            <th class="nav-item<?php if($this -> current == "game"):?>active<?php endif;?>">
+                <a class="nav-link" href="game">Game</a>
+            </th>
+            <th class="nav-item<?php if($this -> current == "highscore"):?>active<?php endif;?>">
+                <a class="nav-link" href="highscore">Highscore</a>
+            </th>
+            <th class="nav-item<?php if($this -> current == "about"):?>active<?php endif;?>">
+                <a class="nav-link" href="about">About</a>
+            </th>
         </tr>
         </thead>
     </table>
@@ -25,8 +29,8 @@ echo $this->header;
     <button onclick="play()" id="play">PLAY</button>
     <button onclick="myGameArea.stop()" id="stop">Stop</button>
 
-    <p id="points">0</p>
-    <p id="life">3</p>
+    <p id="points">Gefangen: 0</p>
+    <p id="life">Leben: 3</p>
     </body>
 <?php
 

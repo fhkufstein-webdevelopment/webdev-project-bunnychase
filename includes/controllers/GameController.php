@@ -10,6 +10,8 @@ class GameController extends Controller
     {
         $this->view->title = "Game";
         $this->view->username = $this->user->username;
+        $this->view->userid = $this->user->id;
+
 
         $this->checkForSaveScorePost();
 
@@ -22,8 +24,9 @@ class GameController extends Controller
             $score = $_POST['score'];
             $userid = $this->user->id;
 
+
             //now we need our Model to save the values
-            GameModel::saveScoreAndAttempts($userid, $score); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
+            GameModel::saveScore($userid, $score); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
             //normally we would first make a new object like so:
             //$gameObj = new GameModel();
             //$gameObj->saveScoreAndAttempts($userid, $score, $attempts);
