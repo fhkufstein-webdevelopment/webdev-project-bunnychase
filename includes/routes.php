@@ -17,3 +17,7 @@ $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' 
 //route zu meinem Spiel
 $route['/game'] = array('controller' => 'GameController', 'uniqueName' => 'game');
 $route['/game.html'] = array('controller' => 'GameController', 'uniqueName' => 'game');
+
+//route zum Highscore
+$route['/highscore'] = array('controller' => 'HighscoreController', 'uniqueName' => 'highscore');
+$route['/highscore.html'] = array('controller' => 'HighscoreController', 'uniqueName' => 'highscore');
