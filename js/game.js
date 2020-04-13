@@ -137,17 +137,22 @@ function component(width, height, x, y) {
                 myGameArea.stop();
                 alert("Du hast keine Leben mehr!\nDu hast "+count+" Eier gefangen");
 
+
+
                 $.ajax({
-                    'url':    'game', //DasSpiel ---  Spiel   ?????
+                    'url':    'game',
                     'method': 'post',
                     'data':    {'action': 'saveScore', 'score': count},
                     'success': function(receivedData) {
                         if(receivedData.result) {
                             //after save change url to scoreboard
-                            location.href = 'scoreboard';
+                            location.href = 'highscore';
                         }
                     }
                 });
+
+
+
 
             }
             myGameArea.context.clearRect(this.x, this.y, this.width, this.height);
@@ -157,7 +162,10 @@ function component(width, height, x, y) {
                 create.piece2();
             }
         }
+
     };
+
+
     this.hitCorb = function() {
         var can = document.getElementById("canvas");
         var hase = document.getElementById("hase");
@@ -311,5 +319,3 @@ function createCarrot(width, height, x, y) {
             (corbRight >= carrotLeft) && (corbBottom >= carrotTop);
     }
 }
-
-// ich veränder was um zu sehen, ob es geht
