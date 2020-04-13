@@ -304,6 +304,7 @@ function createCarrot(width, height, x, y) {
     }
 }
 
+
 function gameOver() {
     myGameArea.stop();
     alert("Sie haben verloren!\n" +

@@ -3,26 +3,22 @@
 echo $this->header;
 ?>
     <head>
-        <!--<link rel="stylesheet" type="text/css" href="css/design.css">-->
+        <link rel="stylesheet" type="text/css" href="css/design.css">
         <link rel="stylesheet" type="text/css" href="css/scoreTabelle.css">
         <meta charset="UTF-8">
         <title>Bunny Chase</title>
-        <!--<script src="js/game.js"></script>-->
+        <script src="js/game.js"></script>
     </head>
     <body onload="startGame()">
-    <img src="js/Bilder/Osterhase1.png" alt="logo" height="80" width="80" id="hasi">
-    <table class="navbar-nav">
+    <h1 id="logo">Logo</h1>
+    <table>
         <thead>
         <tr>
-            <th class="nav-item<?php if($this -> current == "game"):?>active<?php endif;?>">
-                <a class="nav-link" href="game">Game</a>
-            </th>
-            <th class="nav-item<?php if($this -> current == "highscore"):?>active<?php endif;?>">
-                <a class="nav-link" href="highscore">Highscore</a>
-            </th>
-            <th class="nav-item<?php if($this -> current == "about"):?>active<?php endif;?>">
-                <a class="nav-link" href="about">About</a>
-            </th>
+            <th>Game</th>
+            <th>Highscore</th>
+            <th>Register</th>
+            <th>Kontakt</th>
+            <th>About</th>
         </tr>
         </thead>
     </table>
@@ -86,27 +82,27 @@ echo $this->header;
             </table>
         </div>
     </div>
-    </body>
 
-<script>
-    var modal = document.getElementById("myModal");
+    <script>
+        var modal = document.getElementById("myModal");
 
-    var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("close")[0];
 
-    function openModal() {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        function openModal() {
+            modal.style.display = "block";
         }
-    }
-</script>
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    </body>
 <?php
 
 echo $this->footer;
