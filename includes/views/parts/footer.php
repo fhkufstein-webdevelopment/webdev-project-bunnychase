@@ -7,6 +7,8 @@
     <script src="js/game.js"></script>
 <?php else:?>
     <script src="js/core.js"></script>
+<script src="js/game.js"></script>
+
 <?php endif;?>
 
 </body>

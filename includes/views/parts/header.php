@@ -8,9 +8,15 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+
+
 	<?php if($this->current == "login"): ?>
 		<link href="css/toastr.min.css" rel="stylesheet">
-	<?php endif; ?>
+    <?php elseif($this->current == "game"): ?>
+        <link href="css/toastr.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/design.css">
+    <?php endif; ?>
 
 		<link href="css/main.css" rel="stylesheet">
 
@@ -18,22 +24,14 @@
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-	<?php if($this->current == "index"): ?>
-		<script type="text/javascript" src="js/core.js"></script>
-	<?php elseif($this->current == "register"): ?>
-		<script type="text/javascript" src="js/register.js"></script>
-	<?php elseif($this->current == "login"): ?>
-		<script type="text/javascript" src="js/toastr.min.js"></script>
-		<script type="text/javascript" src="js/login.js"></script>
-	<?php endif; ?>
 
 </head>
 <body>
 <header>
 	<div class="inner">
 		<div class="logo">
-			<div class="name">Adressverwaltung</div>
-			<div class="version">1.0</div>
+			<div class="name">Bunny Chase</div>
+			<div class="version">Version: 1.0</div>
 		</div>
 
 		<?php if(LOGGED_IN == true): ?>
@@ -47,7 +45,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand active">Adressverwaltung</a>
+						<a href="/" class="navbar-brand active">Game</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,7 +55,7 @@
 							<li><a href="logout">(Abmelden)</a></li>
 						</ul>
 
-						<p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
+						<p class="navbar-text navbar-right">Zurzeit angemeldet: <strong class="username"><?php echo $this->username; ?></strong></p>
 
 					</div>
 				</div>

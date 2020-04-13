@@ -75,6 +75,19 @@ INSERT INTO `user` (`id`, `name`, `password`) VALUES
 (7, 'einCoolerUser', '$2y$10$BWCiZtoNNHF.ZhZ9U0uoY.lqkVLppcAklqOAhEClM6DU3otdmxV02'),
 (8, 'bunnychase_user', '$2y$10$SNz1Cb9A0n/osrNK6cFGgOkmoe5B/LUm6.0O86E0BdhxhtpLhS71m');
 
+
+-- --------------------------------------------------------
+CREATE TABLE score (
+	`score_id` int PRIMARY KEY AUTO_INCREMENT,
+	`score` int NOT NULL,
+    `userId` int UNSIGNED NOT NULL
+);
+
+
+INSERT INTO score (`score`, `userId`) VALUES 
+	(25, 5);
+
+
 --
 -- Indizes der exportierten Tabellen
 --
@@ -118,6 +131,11 @@ ALTER TABLE `user`
 --
 ALTER TABLE `address`
   ADD CONSTRAINT `address_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+
+ALTER TABLE score
+	ADD FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
