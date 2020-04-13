@@ -34,8 +34,8 @@ echo $this->header;
     <p id="life">Leben: 3</p>
 
     <!--My Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
+    <div id="myModal" class="scoreModal">
+        <div class="scoreModal-content">
             <span class="close">&times;</span>
 
             <table id="score">
@@ -55,6 +55,17 @@ echo $this->header;
                         JOIN score AS s
                         ON s.`userId` = u.`id`
                         ORDER BY s.`score` DESC";
+                //to get the username?
+                //$username = $_POST['username'];
+                /*mit username kann man die id ermitteln
+                In User.php login schauen
+                Mit der id kann man in der score tabelle
+                ein neues score erstellen wo count als score
+                gespeichert wird mit der überprüfung userId = id
+                Eine php Funktion erstellen?
+                */
+
+
                 $conn = (new Database)->getConn();
                 $result = mysqli_query($conn, $sql);
 

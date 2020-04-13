@@ -125,7 +125,6 @@ function component(width, height, x, y) {
         } else if (ran === 4) {
             img.setAttribute("src", "js/Bilder/Egg3.png");
         }
-        console.log(img.src);
         ctx.drawImage(img, 0,0, this.width, this.height);
         ctx.restore();
     };
@@ -136,7 +135,7 @@ function component(width, height, x, y) {
     this.hitBottom = function (piece) {
         var bottom = myGameArea.canvas.height;
         if ((this.y + this.height)>= bottom) {
-            document.getElementById("life").innerText = --life+"";
+            document.getElementById("life").innerText = "Leben: "+ --life;
             if (life<=0) {
                 gameOver();
             }
@@ -181,7 +180,7 @@ function component(width, height, x, y) {
 
 function updateGameAreaMain() {
     if (myGamePiece.hitCorb()) {
-        document.getElementById("points").innerText = ++count + "";
+        document.getElementById("points").innerText = "Gefangen: "+ ++count;
         myGameArea.context.clearRect(myGamePiece.x, myGamePiece.y,
             myGamePiece.width, myGamePiece.height);
         create.piece1();
@@ -192,7 +191,7 @@ function updateGameAreaMain() {
             carrotInterval = setInterval(updateGameAreaWithCarrot, 20);
         }
     } else if (myGamePiece2.hitCorb()) {
-        document.getElementById("points").innerText = ++count + "";
+        document.getElementById("points").innerText = "Gefangen: "+ ++count;
         myGameArea.context.clearRect(myGamePiece2.x, myGamePiece2.y,
             myGamePiece2.width, myGamePiece2.height);
         create.piece2();
@@ -213,7 +212,7 @@ function updateGameAreaMain() {
 
 function updateGameArea() {
     if (myGamePiece.hitCorb()) {
-        document.getElementById("points").innerText = ++count + "";
+        document.getElementById("points").innerText = "Gefangen: "+ ++count;
         myGameArea.context.clearRect(myGamePiece.x, myGamePiece.y,
             myGamePiece.width, myGamePiece.height);
         create.piece1();
@@ -226,17 +225,17 @@ function updateGameArea() {
 
 function updateGameAreaWithCarrot() {
     if (myGamePiece.hitCorb()) {
-        document.getElementById("points").innerText = ++count + "";
+        document.getElementById("points").innerText = "Gefangen: "+ ++count;
         myGameArea.context.clearRect(myGamePiece.x, myGamePiece.y,
             myGamePiece.width, myGamePiece.height);
         create.piece1();
     } else if (myGamePiece2.hitCorb()) {
-        document.getElementById("points").innerText = ++count + "";
+        document.getElementById("points").innerText = "Gefangen: "+ ++count;
         myGameArea.context.clearRect(myGamePiece2.x, myGamePiece2.y,
             myGamePiece2.width, myGamePiece2.height);
         create.piece2();
     } else if (carrot.hitCorb()) {
-        document.getElementById("life").innerText = ++life+"";
+        document.getElementById("life").innerText = "Leben: "+ ++life;
         myGameArea.context.clearRect(carrot.x, carrot.y,
             carrot.width, carrot.height);
         clearInterval(carrotInterval);
@@ -307,7 +306,9 @@ function createCarrot(width, height, x, y) {
 
 function gameOver() {
     myGameArea.stop();
-    alert("0 Leben");
+    alert("Sie haben verloren!\n" +
+        "Es wurden "+count+" Eier gefangen.");
+    //ajax Methode kann eine php Funktion aufrufen -> um ein Insert Statement zu erstellen
     $.ajax({
         'url':    'game',
         'method': 'post',
