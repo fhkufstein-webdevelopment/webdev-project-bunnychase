@@ -8,12 +8,13 @@ class GameController extends Controller
 
     public function run()
     {
-        $this->view->title = "Game";
+        $this->view->title = "game";
         $this->view->username = $this->user->username;
         $this->view->userid = $this->user->id;
 
 
         $this->checkForSaveScorePost();
+        $this->view->scores = GameModel::getAllScores();
 
     }
 

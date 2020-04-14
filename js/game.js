@@ -318,8 +318,11 @@ function gameOver() {
             if(receivedData.result) {
                 //after save change url to scoreboard
                 location.href = 'highscore';
+                //openModal();
+            } else {
+                console.log("Error");
             }
         }
     });
-    openModal();
+    //openModal();
 }

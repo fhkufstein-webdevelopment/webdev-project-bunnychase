@@ -36,14 +36,14 @@ echo $this->header;
                 <tr>
                     <th class="el">User_id</th>
                     <th class="el">Nickname</th>
-                    <th class="el">Score_id</th>
+                    <th class="el">Platzierung</th>
                     <th class="el">Score</th>
                 </tr>
                 </thead>
                 <tbody id="tbody">
                 <?php
                 //muss verändert werden
-                $sql = "SELECT u.`id`, u.`name`, s.`score_id`, s.`score`
+                /*$sql = "SELECT u.`id`, u.`name`, s.`score_id`, s.`score`
                         FROM `user` AS u
                         JOIN score AS s
                         ON s.`userId` = u.`id`
@@ -59,7 +59,7 @@ echo $this->header;
                 */
 
 
-                $conn = (new Database)->getConn();
+                /*$conn = (new Database)->getConn();
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
@@ -73,8 +73,16 @@ echo $this->header;
                 } else {
                     echo "0 results";
                 }
-                @mysqli_close($conn);
+                @mysqli_close($conn);*/
                 ?>
+                <?php foreach ($this->scores as $index => $scoreObj): ?>
+                    <tr>
+                        <th class="el"><?php echo $scoreObj->id ?></th>
+                        <th class="el"><?php echo $scoreObj->name ?></th>
+                        <th class="el"><?php echo $index+1?>.</th>
+                        <th class="el"><?php echo $scoreObj->score ?></th>
+                    </tr>
+                <?php endforeach;?>
                 </tbody>
             </table>
         </div>

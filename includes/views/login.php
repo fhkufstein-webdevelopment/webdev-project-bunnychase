@@ -18,7 +18,7 @@ echo $this->header;
               integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
 
         <!--Custom Style-->
-        <link rel="stylesheet" href="bunny.css">
+        <!-- <link rel="stylesheet" href="bunny.css">-->
 
     </head>
 <body>

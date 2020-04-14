@@ -2,7 +2,7 @@
 
 class HighscoreController extends Controller
 {
-    protected $viewFileName = "game"; //this will be the View that gets the data...
+    protected $viewFileName = "highscore"; //this will be the View that gets the data...
     protected $loginRequired = true;
 
 
@@ -12,6 +12,7 @@ class HighscoreController extends Controller
         $this->view->username = $this->user->username;
         $this->view->userid = $this->user->id;
 
+        $this->view->scores = GameModel::getAllScores();
     }
 
 
