@@ -26,6 +26,8 @@ echo $this->header;
     <p id="points">Gefangen: 0</p>
     <p id="life">Leben: 3</p>
 
+
+    <?php /*include "Modal.php";*/?>
     <!--My Modal -->
     <div id="myModal" class="scoreModal">
         <div class="scoreModal-content">

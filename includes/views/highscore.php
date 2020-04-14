@@ -2,7 +2,7 @@
 
 echo $this->header;
 ?>
-<div class="container">
+<div class="container"> <!-- style="overflow: auto; height: 500px"-->
     <div class="row">
         <div class="col-12">
             <h1>Highscore</h1>
