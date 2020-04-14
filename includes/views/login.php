@@ -11,7 +11,6 @@ echo $this->header;
         <title>Bunny chase</title>
         <link rel="schortcut icon" type="image/png" href="css/Bilder/easter-egg.png">
 
-<<<<<<< HEAD
         <!--Owl-Carousel -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
               integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
@@ -20,9 +19,6 @@ echo $this->header;
 
         <!--Custom Style-->
         <!-- <link rel="stylesheet" href="bunny.css">-->
-
-=======
->>>>>>> a38b25e27f92e6c4709c32c497794d0f1e10c459
     </head>
     <body>
     <div id="main">
