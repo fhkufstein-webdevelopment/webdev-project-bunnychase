@@ -12,7 +12,7 @@ $route['/login.html'] = array('controller' => 'LoginController', 'uniqueName' =>
 $route['/logout'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 $route['/logout.html'] = array('controller' => 'LogoutController', 'uniqueName' => 'logout');
 
-//$route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
+$route['/adresse'] = array('controller' => 'AddressDetailController', 'uniqueName' => 'addressdetail');
 
 //route zu meinem Spiel
 $route['/game'] = array('controller' => 'GameController', 'uniqueName' => 'game');

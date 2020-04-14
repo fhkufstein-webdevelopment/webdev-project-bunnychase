@@ -19,10 +19,7 @@ echo $this->header;
 
         <!--Custom Style-->
         <!-- <link rel="stylesheet" href="bunny.css">-->
-<<<<<<< HEAD
 
-=======
->>>>>>> 3f6ac808f2310880edea3ac1cf102132760d1881
     </head>
     <body>
     <div id="main">
@@ -57,7 +54,7 @@ echo $this->header;
                                placeholder="Passwort">
                     </div>
                 </div>
-                <button type="submit" class="">Anmelden</button>
+                <button type="submit" class="btn-primary">Anmelden</button>
                 <input type="hidden" name="action" value="login">
             </form>
 
@@ -109,12 +106,12 @@ echo $this->header;
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="" data-dismiss="modal">Abbrechen</button>
-                    <button type="button" class="">Registrieren</button>
+                    <button type="button" class="btn-primary">Registrieren</button>
                 </div>
             </div>
         </div>
     </div>
-
+    </div>
     <section>
 
         <div class="set">

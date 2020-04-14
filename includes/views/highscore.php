@@ -30,7 +30,7 @@ echo $this->header;
             </table>
         </div>
         <p class="form-check col-xs-12">
-            Noch nicht genug? <a href="game#again" class="registerOverlay">HIER </a>klicken um nochmal zu spielen.
+            Noch nicht genug? <a href="game" class="Overlay">HIER </a>klicken um nochmal zu spielen.
         </p>
     </div>
 </div>
