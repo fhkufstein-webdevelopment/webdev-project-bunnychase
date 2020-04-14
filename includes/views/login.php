@@ -11,6 +11,7 @@ echo $this->header;
         <title>Bunny chase</title>
         <link rel="schortcut icon" type="image/png" href="css/Bilder/easter-egg.png">
 
+<<<<<<< HEAD
         <!--Owl-Carousel -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
               integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
@@ -20,8 +21,10 @@ echo $this->header;
         <!--Custom Style-->
         <!-- <link rel="stylesheet" href="bunny.css">-->
 
+=======
+>>>>>>> a38b25e27f92e6c4709c32c497794d0f1e10c459
     </head>
-<body>
+    <body>
     <div id="main">
         <p class="bunny">BUNNY</p>
         <p class="chase">CHASE</p>
@@ -29,7 +32,7 @@ echo $this->header;
             <h1 class="col-6 col-md-4">Login</h1>
 
             <form method="post" action="login" class="form-horizontal col-xs-12">
-                <?php if($this->errorPasswd == true): ?>
+                <?php if ($this->errorPasswd == true): ?>
                     <div class="alert alert-danger alert-dismissible fade in" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -43,13 +46,15 @@ echo $this->header;
                 <div class="form-group">
                     <label for="username" class="col-6 col-md-4">Benutzername</label>
                     <div class="col-xs-12 col-md-4">
-                        <input type="text" name="username" id="username" class="text form-control" value="" placeholder="Benutzername">
+                        <input type="text" name="username" id="username" class="text form-control" value=""
+                               placeholder="Benutzername">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password" class="col-6 col-md-4">Passwort</label>
                     <div class="col-xs-12 col-md-4">
-                        <input type="password" name="password" id="password" class="text form-control" value="" placeholder="Passwort">
+                        <input type="password" name="password" id="password" class="text form-control" value=""
+                               placeholder="Passwort">
                     </div>
                 </div>
                 <button type="submit" class="">Anmelden</button>
@@ -58,17 +63,19 @@ echo $this->header;
 
             </br>
             <p class="form-check col-xs-12">
-           Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
+                Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können
+                Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
             </p>
-            </div>
         </div>
     </div>
 
-    <div class="modal fade<?php if($registerError):?> in<?php endif; ?>" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
+    <div class="modal fade<?php if ($registerError): ?> in<?php endif; ?>" id="registerModal" tabindex="-1"
+         role="dialog" aria-labelledby="registerModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="registerModalLabel">Registrierung</h4>
                 </div>
                 <div class="modal-body">
@@ -81,15 +88,18 @@ echo $this->header;
 
                             <div class="form-group">
                                 <label for="name">Benutzername:</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Benutzernamen eingeben">
+                                <input type="text" class="form-control" name="name" id="name"
+                                       placeholder="Benutzernamen eingeben">
                             </div>
                             <div class="form-group">
                                 <label for="pwd">Passwort (mindestens 8 Zeichen):</label>
-                                <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Bitte Passwort eingeben (mind. 8 Zeichen)">
+                                <input type="password" name="pwd" class="form-control" id="pwd"
+                                       placeholder="Bitte Passwort eingeben (mind. 8 Zeichen)">
                             </div>
                             <div class="form-group">
                                 <label for="pwd2">Passwort (wiederholen):</label>
-                                <input type="password" name="pwd2" class="form-control" id="pwd2" placeholder="Bitte das Passwort wiederholen">
+                                <input type="password" name="pwd2" class="form-control" id="pwd2"
+                                       placeholder="Bitte das Passwort wiederholen">
                             </div>
 
                             <input type="hidden" name="action" value="register">
@@ -141,7 +151,7 @@ echo $this->header;
             <div><img src="./css/Bilder/EGG-3.png" alt="Egg3"/></div>
         </div>
     </section>
-</body>
+    </body>
 <?php
 
 echo $this->footer;
