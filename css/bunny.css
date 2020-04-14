@@ -1,0 +1,205 @@
+/*Import fonts from google font */
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=Comic+Neue:wght@700&display=swap');
+
+html,body{
+    overflow: hidden;
+    background: pink;
+    /*background: linear-gradient(to right, white,hotpink);*/
+    background: url("Bilder/Nina1234.png"),url("Bilder/Nina12345.png" );
+    background-size: cover;
+    background-repeat: no-repeat;}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98%;
+}
+
+.container .panel{
+    width: 60%;
+    height: 72%;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.350);
+
+}
+.bunny,.chase{
+    text-shadow: 0 0 2px red;
+    font-weight: bolder;
+    margin:0;
+    top: 7px;
+    font-size: 90px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    position: absolute;
+    width: 90px;
+    color: gold;
+}
+.bunny{
+    left: 100px;
+}
+.chase{
+    right: 110px;
+
+}
+
+.row{
+    display: grid;
+    grid-template-columns: -1fr -1fr 4fr;
+    height: 100%;
+    width: 100%;
+    background: hsla(360, 100%, 100%, 0.6);
+    position: center;
+}
+
+.liquid{
+    background-image: url('./Bilder/Osterhase1.png');
+height: 50%;
+    width: 50%;
+}
+
+/* Second Column Login */
+
+.btn{
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4rem;
+    background: dodgerblue;
+    color: whitesmoke;
+    font-size: .7rem;
+    font-family: 'Lobster', cursive;
+    box-shadow: 3px 4px 7px rgba(27,27,27,0.534);
+    cursor: pointer;
+}
+
+
+.titles{
+    margin-bottom: 2.2rem;
+}
+
+form{
+    height: 55%;
+    max-height: 280px;
+    margin-top: 5.5rem;
+}
+
+form h5{
+    font-family: 'Lobster', cursive;
+    font-size: x-large;
+    margin: 0;
+    padding: 0 1rem 0 1rem;
+}
+
+/*
+form .form-group{
+    text-align: left;
+    border: 1px solid rgba(0,0,0,0.350);
+    margin-top: .5rem;
+    margin-right: 5rem;
+    margin-left: 1rem;
+    border-radius: 11rem;
+}
+
+form .form-group .form-input{
+    padding: .5rem 1rem;
+    background: transparent;
+    border: none;
+    font-family: 'Lobster', cursive;
+    font-size: .7rem;
+    overflow: hidden;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form .input-icon{
+    display: inline;
+    color: rgba(0,0,0,0.329);
+}
+
+form .btn-login{
+    float: none;
+    padding: .5rem 3rem;
+    margin-left: 1rem;
+}*/
+
+.set {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.set div{
+    position: absolute;
+}
+.set div:nth-child(1){
+    left: 20%;
+    animation: animate 15s linear infinite;
+    animation-delay: -7s;
+}
+.set div:nth-child(2){
+    left: 50%;
+    animation: animate 20s linear infinite;
+    animation-delay: -5s;
+}
+.set div:nth-child(3){
+    left: 70%;
+    animation: animate 25s linear infinite;
+}
+.set div:nth-child(4){
+    left: 0;
+    animation: animate 15s linear infinite;
+    animation-delay: -5s;
+}
+.set div:nth-child(5){
+    left: 85%;
+    animation: animate 18s linear infinite;
+    animation-delay: -10s;
+}
+.set div:nth-child(6){
+    left: 0;
+    animation: animate 14s linear infinite;
+}
+.set div:nth-child(7){
+    left: 15%;
+    animation: animate 15s linear infinite;
+}
+.set div:nth-child(8){
+    left: 60%;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40%{
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60%{
+        transform: translateX(20px) rotate(135deg);
+    }
+    80%{
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100%{
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+/*
+.set2{
+    transform: scale(0.8) rotateZ(180deg);
+    filter: blur(0);
+}
+.set3{
+    transform: scale(0.8) rotateZ(180deg);
+    filter: blur(0);
+}*/

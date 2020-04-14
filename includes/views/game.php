@@ -10,15 +10,12 @@ echo $this->header;
         <script src="js/game.js"></script>
     </head>
     <body onload="startGame()">
-    <h1 id="logo">Logo</h1>
+    <h1>Play Bunny Chase</h1>
     <table>
         <thead>
         <tr>
             <th>Game</th>
             <th>Highscore</th>
-            <th>Register</th>
-            <th>Kontakt</th>
-            <th>About</th>
         </tr>
         </thead>
     </table>

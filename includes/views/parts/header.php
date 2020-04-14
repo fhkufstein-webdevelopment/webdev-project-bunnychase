@@ -9,7 +9,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <?php if($this->current == "login"): ?>
-        <link href="css/toastr.min.css" rel="stylesheet">
+     <link href="css/toastr.min.css" rel="stylesheet"> <!--für warning, error,... Notifications-->
+       <link href="css/bunny.css" rel="stylesheet">
+    <?php elseif($this->current == "logout"): ?>
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/bunny.css" rel="stylesheet">
+
     <?php endif; ?>
 
     <link href="css/main.css" rel="stylesheet">
@@ -33,7 +38,7 @@
     <div class="inner">
         <div class="logo">
             <div class="name">Bunny Chase</div>
-            <div class="version">Verion: 1.0</div>
+            <div class="version"> 1.0</div>
         </div>
 
         <?php if(LOGGED_IN == true): ?>
