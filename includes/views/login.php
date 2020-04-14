@@ -19,7 +19,10 @@ echo $this->header;
 
         <!--Custom Style-->
         <!-- <link rel="stylesheet" href="bunny.css">-->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f6ac808f2310880edea3ac1cf102132760d1881
     </head>
     <body>
     <div id="main">
