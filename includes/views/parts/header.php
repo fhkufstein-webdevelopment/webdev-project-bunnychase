@@ -32,8 +32,8 @@
 <header>
     <div class="inner">
         <div class="logo">
-            <div class="name">Adressverwaltung</div>
-            <div class="version">1.0</div>
+            <div class="name">Bunny Chase</div>
+            <div class="version">Verion: 1.0</div>
         </div>
 
         <?php if(LOGGED_IN == true): ?>
@@ -47,7 +47,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="/" class="navbar-brand active">Adressverwaltung</a>
+                        <a href="/" class="navbar-brand active">Game</a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
