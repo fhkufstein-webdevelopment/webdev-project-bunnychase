@@ -15,7 +15,8 @@ echo $this->header;
         <thead>
         <tr>
             <th>Game</th>
-            <th>Highscore</th>
+            <th><a href="highscore" class="registerOverlay">Highscore</a></th>
+
         </tr>
         </thead>
     </table>
