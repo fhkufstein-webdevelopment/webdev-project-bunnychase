@@ -14,7 +14,9 @@
     <?php elseif($this->current == "logout"): ?>
         <link href="css/main.css" rel="stylesheet">
         <link href="css/bunny.css" rel="stylesheet">
-
+    <?php elseif($this->current == "highscore"): ?>
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/bunny.css" rel="stylesheet">
     <?php endif; ?>
 
     <link href="css/main.css" rel="stylesheet">
@@ -30,6 +32,7 @@
     <?php elseif($this->current == "login"): ?>
         <script type="text/javascript" src="js/toastr.min.js"></script>
         <script type="text/javascript" src="js/login.js"></script>
+
     <?php endif; ?>
 
 </head>

@@ -29,6 +29,9 @@ echo $this->header;
                 </tbody>
             </table>
         </div>
+        <p class="form-check col-xs-12">
+            Noch nicht genug? <a href="game#again" class="registerOverlay">HIER </a>klicken um nochmal zu spielen.
+        </p>
     </div>
 </div>
 <?php
