@@ -11,20 +11,25 @@ echo $this->header;
     </head>
     <body onload="startGame()">
     <h1>Play Bunny Chase</h1>
+    <p>Bewege die Pfeiltasten um den Hasen nach links & rechts zu bewegen. Fange ein Ei und bekomme Punkte. Fange eine Karotte und bekomme ein zusätzliches Leben</p>
+
     <table>
         <thead>
         <tr>
             <th>Game</th>
             <th><a href="highscore" class="Overlay">Highscore </a></th>
         </tr>
+        <tr>
+            <th><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
+            <th><button onclick="myGameArea.stop()" id="stop">Stop</button></th>
+        </tr>
+        <tr><th id="points">Gefangen: 0</th></tr>
+        <tr><th id="life">Leben: 3</th></tr>
         </thead>
     </table>
     <img src="js/Bilder/Bunnz-chace.png" alt="hallo" height="100" width="80" id="hase">
-    <button onclick="play()" id="play">PLAY</button>
-    <button onclick="myGameArea.stop()" id="stop">Stop</button>
 
-    <p id="points">Gefangen: 0</p>
-    <p id="life">Leben: 3</p>
+
 
     <!--My Modal -->
     <div id="myModal" class="scoreModal">
