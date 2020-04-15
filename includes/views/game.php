@@ -31,6 +31,8 @@ echo $this->header;
 
 
 
+
+    <?php /*include "Modal.php";*/?>
     <!--My Modal -->
     <div id="myModal" class="scoreModal">
         <div class="scoreModal-content">
