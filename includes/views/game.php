@@ -25,6 +25,7 @@ echo $this->header;
         </tr>
         <tr><th id="points">Gefangen: 0</th></tr>
         <tr><th id="life">Leben: 3</th></tr>
+<!--<p>blabla</p>-->
         </thead>
     </table>
     <img src="js/Bilder/Bunnz-chace.png" alt="hallo" height="100" width="80" id="hase">
