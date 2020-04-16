@@ -2,6 +2,12 @@
 
 echo $this->header;
 ?>
+<style>
+    .red {
+        background-color: red;
+    }
+</style>
+<body style="overflow-y: scroll">
 <div class="container"> <!-- style="overflow: auto; height: 500px"-->
     <div class="row">
         <div class="col-12">
@@ -20,10 +26,17 @@ echo $this->header;
                 <tbody>
                 <?php foreach ($this->scores as $index => $scoreObj): ?>
                     <tr>
-                    <th><?php echo $scoreObj->id ?></th>
+                    <?php if($scoreObj->score_id == $_COOKIE["scoreId"]):?>
+                    <th class="red"><?php echo $scoreObj->score_id ?></th>
+                    <th class="red"><?php echo $scoreObj->name ?></th>
+                    <th class="red"><?php echo $index+1?>.</th>
+                    <th class="red"><?php echo $scoreObj->score ?></th>
+                    <?php else: ?>
+                    <th><?php echo $scoreObj->score_id ?></th>
                     <th><?php echo $scoreObj->name ?></th>
                     <th><?php echo $index+1?>.</th>
                     <th><?php echo $scoreObj->score ?></th>
+                    <?php endif;?>
                     </tr>
                 <?php endforeach;?>
                 </tbody>
@@ -34,6 +47,7 @@ echo $this->header;
         </p>
     </div>
 </div>
+</body>
 <?php
 
 echo $this->footer;

@@ -27,7 +27,7 @@ class GameController extends Controller
 
 
             //now we need our Model to save the values
-            GameModel::saveScore($userid, $score); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
+            $id = GameModel::saveScore($userid, $score); //:: ist only working when we define a Method as static. That means one can use the method without instanciating an object
             //normally we would first make a new object like so:
             //$gameObj = new GameModel();
             //$gameObj->saveScoreAndAttempts($userid, $score, $attempts);
@@ -41,6 +41,7 @@ class GameController extends Controller
             $jsonResponse = new JSON();
             $jsonResponse->result = true; //this is important, as the frontend expects result true if everything was ok
             $jsonResponse->setMessage("Werte gespeichert!"); //(optional)
+            $jsonResponse->setData($id);
             $jsonResponse->send();
         }
     }

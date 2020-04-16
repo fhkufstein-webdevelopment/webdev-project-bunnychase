@@ -2,6 +2,7 @@
 
 class GameModel
 {
+
     public static function saveScore($userid, $score)
     {
         $db = new Database();
@@ -11,7 +12,9 @@ class GameModel
 
         $data['id'] = $db->insertId();
 
-        return (object) $data;
+        //$getId = "SELECT score_id FROM score WHERE score = '".$db->escapeString($score)."' AND userId = '".$db->escapeString($userid)."'";
+
+        return (object) $data['id'];
     }
 
     public static function getAllScores() {
@@ -35,5 +38,9 @@ class GameModel
         }
 
         return null;
+    }
+
+    public static function getLastId() {
+        return $lastid;
     }
 }

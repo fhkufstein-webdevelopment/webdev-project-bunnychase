@@ -304,7 +304,6 @@ function createCarrot(width, height, x, y) {
     }
 }
 
-
 function gameOver() {
     myGameArea.stop();
     alert("Sie haben verloren!\n" +
@@ -316,6 +315,8 @@ function gameOver() {
         'data':    {'action': 'saveScore', 'score': count},
         'success': function(receivedData) {
             if(receivedData.result) {
+                var scoreid = receivedData.data['scalar'];
+                setCookie(scoreid);
                 //after save change url to scoreboard
                 location.href = 'highscore';
                 //openModal();
@@ -325,4 +326,48 @@ function gameOver() {
         }
     });
     //openModal();
+}
+
+function setCookie(id) {
+    var cookie = getCookie("scoreId");
+    if (cookie == null) {
+        createCookie("scoreId", id, "10");
+    } else {
+        document.cookie = "scoreId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        createCookie("scoreId", id, "10");
+    }
+}
+
+function createCookie(name, value, days) {
+    var expires;
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+            end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
 }
