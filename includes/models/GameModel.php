@@ -39,8 +39,4 @@ class GameModel
 
         return null;
     }
-
-    public static function getLastId() {
-        return $lastid;
-    }
 }

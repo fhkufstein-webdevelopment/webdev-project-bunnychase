@@ -4,7 +4,9 @@ echo $this->header;
 
 ?>
 
-
+<?php
+echo "<script>document.cookie = \"scoreId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;\";</script>";
+?>
     <div id="main">
         <div class="row">
             <h1 class="col-xs-12">Logout erfolgreich</h1>

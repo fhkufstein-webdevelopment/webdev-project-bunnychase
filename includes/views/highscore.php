@@ -1,6 +1,7 @@
 <?php
 
 echo $this->header;
+
 ?>
 <style>
     .red {
@@ -8,6 +9,7 @@ echo $this->header;
     }
 </style>
 <body style="overflow-y: scroll">
+<!-- <p><?php /*echo $_COOKIE["scoreId"]*/?></p>-->
 <div class="container"> <!-- style="overflow: auto; height: 500px"-->
     <div class="row">
         <div class="col-12">
