@@ -16,7 +16,7 @@ echo $this->header;
         <div class="container">
             <div class="container-inhalt">
                 <h1>Play Bunny Chase</h1>
-                     <p>Bewege die Pfeiltasten um den Hasen nach links & rechts zu bewegen. Fange ein Ei und bekomme Punkte. Fange eine Karotte und bekomme ein zusätzliches Leben</p>
+                     <p>Bewege die Pfeiltasten um den Hasen nach links & rechts zu bewegen. </br>Fange ein Ei und bekomme Punkte. Fange eine Karotte und bekomme ein zusätzliches Leben.</p>
 
                         <table>
                             <thead>
@@ -29,6 +29,8 @@ echo $this->header;
                                     <th id="points">Gefangen: 0</th>
                                 </tr>
                                 <tr>
+                                    <th><button onclick="play()" id="play" class="btn btn-primary">PLAY</button></th>
+                                    <th><button onclick="myGameArea.stop()" id="stop" class="btn btn-light" >Stop</button></th>
                                     <th><button onclick="myGameArea.stop()" id="stop">Stop</button></th>
                                     <th id="life">Leben: 3</th>
                                 </tr>
