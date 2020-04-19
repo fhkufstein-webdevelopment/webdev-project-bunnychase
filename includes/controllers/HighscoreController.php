@@ -13,6 +13,7 @@ class HighscoreController extends Controller
         $this->view->userid = $this->user->id;
 
         $this->view->scores = GameModel::getAllScores();
+        $this->view->score_id = GameModel::getLastId();
     }
 
 

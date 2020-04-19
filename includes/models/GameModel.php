@@ -12,8 +12,6 @@ class GameModel
 
         $data['id'] = $db->insertId();
 
-        //$getId = "SELECT score_id FROM score WHERE score = '".$db->escapeString($score)."' AND userId = '".$db->escapeString($userid)."'";
-
         return (object) $data['id'];
     }
 
@@ -38,5 +36,15 @@ class GameModel
         }
 
         return null;
+    }
+
+    public static function getLastId() {
+        $db = new Database();
+
+        $sql = "SELECT MAX(score_id) as score_id FROM score";
+
+        $result = $db->query($sql);
+
+        return $db->fetchObject($result);
     }
 }
