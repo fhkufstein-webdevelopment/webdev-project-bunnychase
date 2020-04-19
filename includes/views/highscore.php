@@ -14,7 +14,7 @@ echo $this->header;
 
 <style>
     .red {
-        color: red;
+        color: hsla(322, 100%, 74%, 1);
     }
 
     .withscroll {
