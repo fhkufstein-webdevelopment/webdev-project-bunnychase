@@ -18,23 +18,25 @@ function startGame() {
 
 //Funktion die den Hasen bewegt
 window.onkeydown = function(e) {
-    var hase = document.getElementById("hase");
-    var can = document.getElementById("canvas");
-    var keyboardEvent = e.keyCode;
-    var leftHase = hase.offsetLeft;
-    var rightHase = hase.offsetLeft + hase.offsetWidth;
-    var leftCan = can.offsetLeft;
-    var rightCan = can.offsetLeft + can.offsetWidth;
-    if (keyboardEvent === 37 && leftHase-10>=leftCan) {
-        if (hase.getAttribute("src") === "js/Bilder/Bunnz-chace.png") {
-            hase.setAttribute("src", "js/Bilder/Hase-korb-links.png");
+    if (isPlaying) {
+        var hase = document.getElementById("hase");
+        var can = document.getElementById("canvas");
+        var keyboardEvent = e.keyCode;
+        var leftHase = hase.offsetLeft;
+        var rightHase = hase.offsetLeft + hase.offsetWidth;
+        var leftCan = can.offsetLeft;
+        var rightCan = can.offsetLeft + can.offsetWidth;
+        if (keyboardEvent === 37 && leftHase - 10 >= leftCan) {
+            if (hase.getAttribute("src") === "js/Bilder/Bunnz-chace.png") {
+                hase.setAttribute("src", "js/Bilder/Hase-korb-links.png");
+            }
+            hase.style.left = leftHase - 10 + 'px';
+        } else if (keyboardEvent === 39 && rightHase + 10 <= rightCan) {
+            if (hase.getAttribute("src") === "js/Bilder/Hase-korb-links.png") {
+                hase.setAttribute("src", "js/Bilder/Bunnz-chace.png");
+            }
+            hase.style.left = leftHase + 10 + 'px';
         }
-        hase.style.left = leftHase-10 +'px';
-    } else if (keyboardEvent === 39 && rightHase+10<=rightCan) {
-        if (hase.getAttribute("src") === "js/Bilder/Hase-korb-links.png") {
-            hase.setAttribute("src", "js/Bilder/Bunnz-chace.png");
-        }
-        hase.style.left = leftHase+10+'px';
     }
 };
 
@@ -93,6 +95,7 @@ var myGameArea = {
         clearInterval(interval1);
         clearInterval(interval2);
         clearInterval(carrotInterval);
+        isPlaying = false;
     },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
