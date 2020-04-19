@@ -3,13 +3,23 @@
 echo $this->header;
 
 ?>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/design.css">
+    <link rel="stylesheet" type="text/css" href="css/scoreTabelle.css">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+</head>
+
 <style>
     .red {
         color: red;
     }
 
     .withscroll {
-        height: 400px;
+        height: 600px;
         overflow-y: scroll;
         white-space: nowrap;
     }
