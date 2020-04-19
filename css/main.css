@@ -19,6 +19,7 @@ header .inner {
   margin: 0 auto;
   width: 90%;
 
+
 }
 /* line 26, ../scss/main.scss */
 header .inner .logo {
@@ -55,4 +56,9 @@ header::after {
   width: 100%;
   background-color:hsla(322, 100%, 74%, 0.62);
   margin-top: 5px;
+}
+
+.logged-hintergrund {
+  background-color: #ffffff;
+
 }

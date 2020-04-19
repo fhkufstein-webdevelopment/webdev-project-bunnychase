@@ -1,0 +1,23 @@
+.container {color: #482080; background-color: #ffffff; opacity: 0.8; margin-top: 25px;}
+body {
+  background-image: url("../../grafics/bg_klein.png");
+  background-repeat: repeat;
+  background-size: 120px;
+  overflow-x: hidden;
+
+}
+
+
+.bild {
+  width: 100%;
+}
+
+.whitespace {
+  height: auto;
+  background-color: #ffffff;
+
+}
+
+.col-sm-12 {
+  height: 100%;
+}
