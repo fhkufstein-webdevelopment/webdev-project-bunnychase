@@ -4,15 +4,13 @@ echo $this->header;
 
 ?>
 <style>
+    body {
+        /*height: 750px;
+        overflow-y: scroll;*/
+    }
+
     .red {
         color: red;
-    }
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
-        font-size: 14px;
-        line-height: 1.43;
-        color: #333;
-        margin: 0;
     }
 
     .withscroll {
@@ -20,19 +18,15 @@ echo $this->header;
         overflow-y: scroll;
         white-space: nowrap;
     }
-
-    * {
-        box-sizing: border-box;
-    }
 </style>
 <body>
-<div class="withscroll container table-responsive">
+<div class="container table-responsive">
     <div class="row">
         <div class="col-12">
             <h1>Highscore</h1>
         </div>
         <div class="col-12">
-            <table class="table table-striped table-hover">
+            <table class="table">
                 <thead>
                 <tr>
                     <th>User_id</th>
@@ -44,7 +38,7 @@ echo $this->header;
                 <tbody>
                 <?php foreach ($this->scores as $index => $scoreObj): ?>
                     <tr>
-                    <?php if($scoreObj->score_id == 60/*$this->score_id->score_id*/):?>
+                    <?php if($scoreObj->score_id == $this->score_id->score_id):?>
                     <th class="red"><?php echo $scoreObj->score_id ?></th>
                     <th class="red"><?php echo $scoreObj->name ?></th>
                     <th class="red"><?php echo $index+1?>.</th>
@@ -65,14 +59,6 @@ echo $this->header;
         </p>
     </div>
 </div>
-
-<script>
-    var toGame = document.getElementById("toGame");
-
-    toGame.onclick = function () {
-        newLoad();
-    }
-</script>
 </body>
 <?php
 
