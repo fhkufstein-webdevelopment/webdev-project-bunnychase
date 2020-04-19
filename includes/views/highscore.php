@@ -4,11 +4,6 @@ echo $this->header;
 
 ?>
 <style>
-    body {
-        /*height: 750px;
-        overflow-y: scroll;*/
-    }
-
     .red {
         color: red;
     }
@@ -18,15 +13,28 @@ echo $this->header;
         overflow-y: scroll;
         white-space: nowrap;
     }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {background-color:#f5f5f5;}
 </style>
 <body>
-<div class="container table-responsive">
+<div class="withscroll container table-responsive">
     <div class="row">
         <div class="col-12">
             <h1>Highscore</h1>
         </div>
         <div class="col-12">
-            <table class="table">
+            <table> <!-- class="table"-->
                 <thead>
                 <tr>
                     <th>User_id</th>

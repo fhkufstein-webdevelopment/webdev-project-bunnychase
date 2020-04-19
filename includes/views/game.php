@@ -8,9 +8,10 @@ echo $this->header;
         <meta charset="UTF-8">
         <title>Bunny Chase</title>
         <script src="js/jquery-3.2.1.min.js"></script>
-        <!--<script src="js/game.js"></script> -->
+        <script src="js/game.js"></script>
     </head>
     <body onload="startGame()">
+    <img src="js/Bilder/Bunnz-chace.png" alt="hallo" height="100" width="80" id="hase">
     <div class="bgmuster">
         <div class="container">
             <div class="container-inhalt">
@@ -31,7 +32,6 @@ echo $this->header;
                                 <tr><th id="life">Leben: 3</th></tr>
                             </thead>
                         </table>
-               <!-- <img src="js/Bilder/Bunnz-chace.png" alt="hallo" height="100" width="80" id="hase"> -->
             </div>
         </div>
     </div>
