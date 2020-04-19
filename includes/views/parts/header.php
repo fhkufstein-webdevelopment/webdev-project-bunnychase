@@ -4,10 +4,13 @@
     <title><?php echo $this->title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <!-- Bootstrap Einbindung -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Abfrage nach Tab -->
     <?php if($this->current == "login"): ?>
      <link href="css/toastr.min.css" rel="stylesheet">
         <!--für warning, error,... Notifications-->
@@ -39,12 +42,12 @@
 </head>
 <body>
 <header>
+
     <div class="inner">
         <div class="logo">
-            <div class="name">Bunny Chase</div>
+            <a  href="localhost"><img alt="Bunny-Chase" src="css/Bilder/Bunny-Chase.png" style="max-width: 150px"></a><br>
             <div class="version"> 1.0</div>
         </div>
-
         <?php if(LOGGED_IN == true): ?>
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
@@ -56,21 +59,27 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="/" class="navbar-brand active">Game</a>
+                        <a href="/" class="navbar-brand active">Let's play Bunny-Chase</a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="game">Game <span class="sr-only">(aktuell)</span></a></li>
+                                <li><a href="highscore">Highscore</a></li>
+                                <li><a href="#">Kontakt</a></li>
+                            </ul>
 
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="logout">(Abmelden)</a></li>
-                        </ul>
-
-                        <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
+                            <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                  <a href="logout" class="btn btn-default navbar-btn"style="margin: 10; padding: 5px 10px" ">Hier Abmelden</a>
+                                </li>
+                            </ul>
 
                     </div>
                 </div>
             </nav>
+
         <?php else: ?>
             <nav class="mainnav">
                 <ul class="nav nav-pills">

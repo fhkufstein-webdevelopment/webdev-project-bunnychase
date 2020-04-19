@@ -11,6 +11,7 @@ echo $this->header;
         <script src="js/game.js"></script>
     </head>
     <body onload="startGame()">
+    <div class="bgmuster">
     <h1>Play Bunny Chase</h1>
     <p>Bewege die Pfeiltasten um den Hasen nach links & rechts zu bewegen. Fange ein Ei und bekomme Punkte. Fange eine Karotte und bekomme ein zusätzliches Leben</p>
 
@@ -117,7 +118,9 @@ echo $this->header;
         }
 
     </script>
+    </div>
     </body>
+
 <?php
 
 echo $this->footer;
