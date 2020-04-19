@@ -1,8 +1,4 @@
-<?php
-
-echo $this->header;
-
-?>
+<?php echo $this->header;?>
 <head>
     <link rel="stylesheet" type="text/css" href="css/design.css">
     <link rel="stylesheet" type="text/css" href="css/scoreTabelle.css">
