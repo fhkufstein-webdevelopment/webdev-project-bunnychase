@@ -79,7 +79,7 @@
                             <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                  <a  type="button"  href="logout" class="btn btn-info" style="margin: 10px; padding: 5px 10px" >Hier Abmelden</a>
+                                  <a  type="button"  href="logout" class="btn btn-info" style="margin: 10px; padding: 5px 10px;">Hier Abmelden</a>
                                 </li>
                             </ul>
 
