@@ -60,7 +60,7 @@ echo $this->header;
 
             </br>
             <p class="form-check col-xs-12">
-                Melden Sie sich bitte an um den Dienst nutzen zu können. Sie besitzen noch keinen Account? Dann können
+                Melden Sie sich bitte an um das Spiel zu spielen. Sie besitzen noch keinen Account? Dann können
                 Sie sich <a href="login#registrierung" class="registerOverlay">hier registrieren</a>.
             </p>
         </div>
@@ -78,7 +78,7 @@ echo $this->header;
                 <div class="modal-body">
                     <div class="row">
                         <p class="col-xs-12">
-                            Wir benötigen folgende Angaben um Sie für unseren Dienst registrieren zu können:
+                            Es werden folgende Angaben benötigt um Sie für das Spiel registrieren zu können:
                         </p>
 
                         <form method="post" action="login" class="col-xs-12">
