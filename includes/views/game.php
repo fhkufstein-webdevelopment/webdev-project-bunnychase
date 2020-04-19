@@ -15,18 +15,18 @@ echo $this->header;
     <div class="bgmuster">
         <div class="container">
             <div class="container-inhalt">
-                <h1>Play Bunny Chase</h1>
-                     <p>Bewege die Pfeiltasten um den Hasen nach links & rechts zu bewegen. </br>Fange ein Ei und bekomme Punkte. Fange eine Karotte und bekomme ein zusätzliches Leben.</p>
+                <h1 class="center" >Play Bunny Chase</h1>
+                     <p class="center">Bewege die Pfeiltasten um den Hasen nach links & rechts zu bewegen. </br>Fange ein Ei und bekomme Punkte. Fange eine Karotte und bekomme ein zusätzliches Leben.</p>
 
                         <table>
                             <thead>
                                 <tr>
-                                    <th><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
-                                    <th id="points">Gefangen: 0</th>
+                                    <th class="center"><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
+                                    <th class="center" id="points">Gefangen: 0</th>
                                 </tr>
                                 <tr>
-                                    <th><button onclick="myGameArea.stop()" class="btn-primary" id="stop">STOP</button></th>
-                                    <th id="life">Leben: 3</th>
+                                    <th class="center"><button onclick="myGameArea.stop()" class="btn-primary" id="stop">STOP</button></th>
+                                    <th class="center" id="life">Leben: 3</th>
                                 </tr>
                             </thead>
                         </table>
