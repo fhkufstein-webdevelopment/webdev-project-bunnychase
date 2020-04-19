@@ -20,16 +20,18 @@ echo $this->header;
 
                         <table>
                             <thead>
-                                <tr>
-                                    <th>Game</th>
-                                    <th><a href="highscore" class="Overlay">Highscore </a></th>
-                                </tr>
-                                <tr>
+                                <!--<tr>
                                     <th><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
                                     <th><button onclick="myGameArea.stop()" id="stop">Stop</button></th>
+                                </tr>-->
+                                <tr>
+                                    <th><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
+                                    <th id="points">Gefangen: 0</th>
                                 </tr>
-                                <tr><th id="points">Gefangen: 0</th></tr>
-                                <tr><th id="life">Leben: 3</th></tr>
+                                <tr>
+                                    <th><button onclick="myGameArea.stop()" id="stop">Stop</button></th>
+                                    <th id="life">Leben: 3</th>
+                                </tr>
                             </thead>
                         </table>
             </div>

@@ -14,7 +14,7 @@ echo $this->header;
         white-space: nowrap;
     }
 
-    table {
+    /*table {
         border-collapse: collapse;
         width: 100%;
     }
@@ -25,7 +25,7 @@ echo $this->header;
         border-bottom: 1px solid #ddd;
     }
 
-    tr:hover {background-color:#f5f5f5;}
+    tr:hover {background-color:#f5f5f5;}*/
 </style>
 <body>
 <div class="withscroll container table-responsive">
@@ -34,7 +34,7 @@ echo $this->header;
             <h1>Highscore</h1>
         </div>
         <div class="col-12">
-            <table> <!-- class="table"-->
+            <table class="table table-striped table-hover">
                 <thead>
                 <tr>
                     <th>User_id</th>
