@@ -59,7 +59,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="/" class="navbar-brand active">Let's play Bunny-Chase</a>
+                        <a class="navbar-brand active">Let's play Bunny-Chase</a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -72,7 +72,7 @@
                             <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                  <a href="logout" class="btn btn-default navbar-btn"style="margin: 10; padding: 5px 10px" ">Hier Abmelden</a>
+                                  <a href="logout" class="btn btn-default navbar-btn" style="margin: 10px; padding: 5px 10px" >Hier Abmelden</a>
                                 </li>
                             </ul>
 
