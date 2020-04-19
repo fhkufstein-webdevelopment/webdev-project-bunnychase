@@ -45,7 +45,7 @@
 
     <div class="inner">
         <div class="logo">
-            <a  href="localhost"><img alt="Bunny-Chase" src="css/Bilder/Bunny-Chase.png" style="max-width: 150px"></a><br>
+            <a  href="login"><img alt="Bunny-Chase" src="css/Bilder/Bunny-Chase.png" style="max-width: 150px"></a><br>
             <div class="version"> 1.0</div>
         </div>
         <?php if(LOGGED_IN == true): ?>
@@ -64,9 +64,16 @@
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="game">Game <span class="sr-only">(aktuell)</span></a></li>
-                                <li><a href="highscore">Highscore</a></li>
-                                <li><a href="#">Kontakt</a></li>
+                                <?php if($this->current == "game"): ?>
+                                    <li class="active"><a href="game">Game <span class="sr-only">(aktuell)</span></a></li>
+                                    <li><a href="highscore">Highscore</a></li>
+                                    <li><a href="#">Kontakt</a></li>
+                                <?php elseif($this->current =="highscore"):?>
+                                    <li class="active"><a href="highscore">Highscore <span class="sr-only">(aktuell)</span></a></li>
+                                    <li><a href="game">Game</a></li>
+                                    <li><a href="#">Kontakt</a></li>
+                                <?php endif; ?>
+
                             </ul>
 
                             <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
