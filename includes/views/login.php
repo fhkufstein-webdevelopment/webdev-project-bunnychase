@@ -3,24 +3,24 @@
 echo $this->header;
 
 ?>
-    <head>
+    <!-- <head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" CONTENT="ie=edge">
-        <title>Bunny chase</title>
-        <link rel="schortcut icon" type="image/png" href="css/Bilder/easter-egg.png">
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta http-equiv="X-UA-Compatible" CONTENT="ie=edge">
+         <title>Bunny chase</title>
+         <link rel="schortcut icon" type="image/png" href="css/Bilder/easter-egg.png">
 
-        <!--Owl-Carousel -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-              integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-              integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+         Owl-Carousel
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+               integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+               integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
 
-        <!--Custom Style-->
-        <!-- <link rel="stylesheet" href="bunny.css">-->
+         Custom Style
+         <link rel="stylesheet" href="bunny.css">
 
-    </head>
+    </head>-->
     <body>
     <div id="main">
         <p class="bunny">BUNNY</p>
@@ -54,7 +54,7 @@ echo $this->header;
                                placeholder="Passwort">
                     </div>
                 </div>
-                <button type="submit" class="btn-primary">Anmelden</button>
+                <button type="submit" class="btn btn-primary">Anmelden</button>
                 <input type="hidden" name="action" value="login">
             </form>
 
@@ -105,8 +105,8 @@ echo $this->header;
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="" data-dismiss="modal">Abbrechen</button>
-                    <button type="button" class="btn-primary">Registrieren</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-primary">Registrieren</button>
                 </div>
             </div>
         </div>

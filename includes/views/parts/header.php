@@ -67,11 +67,11 @@
                                 <?php if($this->current == "game"): ?>
                                     <li class="active"><a href="game">Game <span class="sr-only">(aktuell)</span></a></li>
                                     <li><a href="highscore">Highscore</a></li>
-                                    <li><a href="#">Kontakt</a></li>
+                                    <!--<li><a href="#">Kontakt</a></li>-->
                                 <?php elseif($this->current =="highscore"):?>
                                     <li class="active"><a href="highscore">Highscore <span class="sr-only">(aktuell)</span></a></li>
                                     <li><a href="game">Game</a></li>
-                                    <li><a href="#">Kontakt</a></li>
+                                   <!-- <li><a href="#">Kontakt</a></li>-->
                                 <?php endif; ?>
 
                             </ul>
@@ -79,7 +79,7 @@
                             <p class="navbar-text navbar-right">Angemeldet als <strong class="username"><?php echo $this->username; ?></strong></p>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                  <a href="logout" class="btn btn-default navbar-btn" style="margin: 10px; padding: 5px 10px" >Hier Abmelden</a>
+                                  <a  type="button"  href="logout" class="btn btn-info" style="margin: 10px; padding: 5px 10px" >Hier Abmelden</a>
                                 </li>
                             </ul>
 
