@@ -40,7 +40,4 @@ class GameController extends Controller
             $jsonResponse->send();
         }
     }
-
 }
-
-//blablabla

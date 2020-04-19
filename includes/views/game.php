@@ -20,10 +20,6 @@ echo $this->header;
 
                         <table>
                             <thead>
-                                <!--<tr>
-                                    <th><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
-                                    <th><button onclick="myGameArea.stop()" id="stop">Stop</button></th>
-                                </tr>-->
                                 <tr>
                                     <th><button onclick="play()" id="play" class="btn-primary">PLAY</button></th>
                                     <th id="points">Gefangen: 0</th>
@@ -37,6 +33,13 @@ echo $this->header;
             </div>
         </div>
     </div>
+
+    <script>
+        function newLoad() {
+            location.reload();
+        }
+    </script>
+
     </body>
 <?php
 

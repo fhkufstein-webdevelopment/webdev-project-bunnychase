@@ -84,6 +84,7 @@ var myGameArea = {
         this.canvas.id = "canvas";
         this.canvas.height = 500;
         this.canvas.width = 1200;
+        this.canvas.style.left = (document.body.offsetWidth/2)-(this.canvas.width/2)+"px";
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.getElementById('logo'));
     },
