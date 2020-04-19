@@ -46,3 +46,11 @@ th {
 
 
 }
+
+.btn-primary {
+    Color: #ffffff;
+
+}
+.btn-primary:hover {
+    background-color: #337Ab7
+}
